@@ -1,0 +1,178 @@
+body {
+    background-image: url('img/img2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#menu {
+    margin-left: 50em;
+}
+
+#logotipo {
+    margin-left: 0.4em;
+    width: 218px;
+    height: 55px;
+}
+
+#fundo {
+    background-color: rgba(0, 0, 0, 0.795);
+    border-bottom: 1px solid white;
+}
+
+#btn {
+    margin-left: 10%;
+}
+
+.nav-link {
+    margin-right: 5%;
+}
+
+.circulo {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.63);
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 56%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+}
+
+#pesquisa {
+    font-weight: bold;
+    font-size: 2.0em;
+    margin-left: 17%;
+    margin-top: 32%;
+}
+
+.teste {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn1 {
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 55px;
+    border-radius: 7px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.btn1::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(#121212, #595959);
+    animation: efeito 1.3s ease infinite;
+    transition: 1s ease;
+}
+
+@keyframes efeito {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container:hover .btn1::before{
+    background: #595959;
+}
+#btn2{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 147px;
+    height: 52px;
+    background: #121212;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+}
+
+.flutuando{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.mexendo {
+    width: 300px;
+    height: 200px;
+    margin-top: 10%;
+    margin-left: 100em;
+    animation: flutuacao 10s
+    ease-in-out infinite;
+}
+@keyframes flutuacao {
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+.efeito {
+    text-decoration: none;
+    font-size: 64px;
+    color: #14fff1;
+    display: inline-block;
+    border: 8px solid #14fff1;
+    padding: 16px 64px;
+    text-shadow: 0 0 8px rgba(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: inset 0 0 32px #14fff1, 0 0 32px #14fff1;
+    position: relative;
+}
+.efeito::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #14fff1;
+    left: 0;
+    top: 120%;
+    transform: perspective(64px) rotateX(40deg) scale(1, 0.35); filter: blur(64px);
+    opacity: 0.7;
+}
+
+.efeito::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #14fff1;
+    box-shadow: 0 0 128px 32px #14fff1;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.efeito:hover::after,
+.efeito:focus::before {
+    opacity: 1;
+}
+
+.efeito:hover::before,
+.efeito:focus::before {
+    opacity: 1;
+}
+.efeito:hover,
+.efeito:focus {
+    color: #fff;
+    text-shadow: none;
+}
