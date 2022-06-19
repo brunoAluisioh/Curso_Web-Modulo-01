@@ -30,8 +30,8 @@ body {
 }
 
 .circulo {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     background-color: rgba(255, 255, 255, 0.63);
     border: 2px solid white;
     border-radius: 50%;
@@ -39,6 +39,7 @@ body {
     top: 56%;
     left: 82%;
     transform: translate(-50%, -50%);
+    
 }
 
 #pesquisa {
@@ -65,6 +66,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    margin-top: 140%;
 }
 
 .btn1::before {
@@ -100,6 +102,14 @@ body {
     letter-spacing: 1px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.3rem;
+}
+
+#seta {
+    color: black;
+    font-weight: 570;
+    font-size: 5.5em;
+    padding-bottom: 70%;
+    margin-left: 35%;
 }
 
 .flutuando{
@@ -176,3 +186,109 @@ body {
     color: #fff;
     text-shadow: none;
 }
+
+span{
+    color: white;
+    font-weight: bold;
+    font-size: 5.5em;
+}
+
+.sobre{
+    color: white;
+    text-align: center;
+    padding-right: 53%;
+    padding-top: 12%;
+    padding-left: 8%;
+    border: 50% white;
+}
+
+
+@keyframes spin {
+    /* X para espaço 3D ou Y */
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(360deg);}
+}
+/*apenas girar se passar o cursor* .spinning:hover*/
+.spinning{
+    animation: spin 5s infinite;
+}
+#lua{
+    width: 200px;
+    height: 200px;
+    margin-left: 52%;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .card:hover .content{
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.005);
+    pointer-events: none;
+}
+
+.container .card .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.container .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
