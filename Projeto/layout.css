@@ -1,5 +1,5 @@
 body {
-    background-image: url('img/img2.jpg');
+    background-image: url('img/layout_Inicial.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -291,4 +291,3 @@ span{
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
